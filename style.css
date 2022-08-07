@@ -1,0 +1,129 @@
+@media screen and (min-width: 1366px) {
+  body {
+    background-color: lightgray;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .menu {
+    height: 100vh;
+  }
+  .intro-card {
+    background-size: cover;
+  }
+  .carousel-holder {
+    height: 80%;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .controler {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #main-content h1,
+  #main-content h2 {
+    font-weight: lighter;
+  }
+  .welcome-page {
+    /* height: 95%; */
+    display: grid;
+    place-content: center;
+    width: 65%;
+    margin: auto;
+  }
+  #quote {
+    background-color: #efecec;
+    width: 70%;
+    padding: 1rem;
+  }
+  .to-do {
+    width: 55%;
+    background-color: #efecec;
+    margin: auto;
+    /* min-height: 55%; */
+    position: relative;
+  }
+  .expense-calculator {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 65%;
+    margin: 2rem auto;
+    min-height: 95%;
+  }
+  .expense-header {
+    grid-column: 1 / 3;
+  }
+  .table {
+    grid-column: 1 / 3;
+  }
+  .articles {
+    display: flex;
+    width: 55%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    height: 100vh;
+  }
+  .carousel-holder {
+    height: 80%;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .intro-card {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .controler {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #main-content h1,
+  #main-content h2 {
+    font-weight: light;
+  }
+  .welcome-page {
+    padding: 7%;
+  }
+  #quote {
+    background-color: #efecec;
+    width: 90%;
+    padding: 1rem;
+    margin: auto;
+  }
+  .to-do {
+    width: 95%;
+    background-color: #efecec;
+    margin: auto;
+    min-height: 55%;
+    position: relative;
+  }
+  .expense-calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 95%;
+    margin: 2rem auto;
+    min-height: 95%;
+  }
+  .articles {
+    display: flex;
+    width: 95%;
+    margin: auto;
+  }
+}

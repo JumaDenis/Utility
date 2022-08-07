@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="primary.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Utility app</title>
+  </head>
+  <body>
+    <!-- ------------intro cards---------- -->
+    <div class="menu" id="menu-panel">
+      <ul id="nav">
+        <!-- <li class="mobile ml-3">
+          <button class="btn btn-danger" id="closeMenuBtn">X</button>
+        </li> -->
+        <li>
+          <a href="#home">
+            <svg
+              fill="#ffffff"
+              xmlns="http://www.w3.org/2000/svg"
+              height="48"
+              width="48"
+            >
+              <path
+                d="M8 42V18L24.1 6 40 18v24H28.3V27.75h-8.65V42Zm3-3h5.65V24.75H31.3V39H37V19.5L24.1 9.75 11 19.5Zm13-14.65Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#todo">
+            <svg
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              height="48"
+              width="48"
+            >
+              <path
+                d="M18.9 35.7 7.7 24.5l2.15-2.15 9.05 9.05 19.2-19.2 2.15 2.15Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#expCalculator">
+            <svg
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              height="48"
+              width="48"
+            >
+              <path
+                d="M44 11v26q0 1.2-.9 2.1-.9.9-2.1.9H7q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1ZM7 16.45h34V11H7Zm0 6.45V37h34V22.9ZM7 37V11v26Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section id="intro-cards">
+      <div class="carousel-holder">
+        <ul class="carousel-track">
+          <li class="carousel-card current">
+            <div class="intro-card card-one">
+              <h1>utility</h1>
+            </div>
+          </li>
+          <li class="carousel-card">
+            <div class="intro-card card-two">
+              <h1 class="text-center">a new way to organize yourself...</h1>
+            </div>
+          </li>
+          <li class="carousel-card">
+            <div class="intro-card card-three">
+              <h1>a beutiful way to do it</h1>
+            </div>
+          </li>
+          <li class="carousel-card last">
+            <div class="intro-card auth-card">
+              <div class="login-form">
+                <h1>Authentication</h1>
+                <div class="input-group">
+                  <span class="input-group-text">Name</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="user-name"
+                  />
+                </div>
+                <p class="lead">Gender:</p>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="gender"
+                    id="male"
+                  />
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="gender"
+                    id="female"
+                  />
+                  <label class="form-check-label" for="female">female</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="gender"
+                    id="other"
+                  />
+                  <label class="form-check-label" for="other">Other</label>
+                </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Password</span>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="name"
+                    id="user-pass"
+                  />
+                  <button class="btn btn-primary" id="showPass">show</button>
+                </div>
+                <button class="btn btn-primary d-block mb-2" id="genPass">
+                  Generate password
+                </button>
+                <button id="startBtn" class="btn btn-success">
+                  Get started
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="controler">
+        <button class="btn skip-btn">skip</button>
+        <button class="btn next-btn">next</button>
+      </div>
+    </section>
+
+    <!-- --------------main body------------- -->
+
+    <main id="main-content">
+      <section class="welcome-page" id="home">
+        <button id="menuToggle" class="btn mobile">&#9776;</button>
+        <div class="logo"></div>
+        <h1 class="my-4">
+          Good <span class="time"></span> <span class="name"></span>
+        </h1>
+        <p class="lead"></p>
+        <p class="lead">
+          <span class="salutation"></span>, here is a quote for you by
+          <span class="author">Joubert Botha</span>
+        </p>
+        <p class="lead" id="quote">
+          Sometimes the people around you wont understand your journey. They
+          don't need to, it's not for them
+        </p>
+      </section>
+      <section class="to-do" id="todo">
+        <h1 class="my-3 text-center">
+          what you gon do today, <span class="salutation">sir</span>
+        </h1>
+        <table class="table table-striped">
+          <tbody id="todo-body"></tbody>
+        </table>
+        <div class="input-group">
+          <input
+            type="text"
+            name="todo-input"
+            id="todo-input"
+            class="form-control"
+          />
+          <button id="todo-btn" class="btn btn-primary">add</button>
+        </div>
+      </section>
+
+      <section class="expense-calculator" id="expCalculator">
+        <h1 class="my-3 text-center expense-header">
+          Do some basic accounting
+        </h1>
+        <div class="income-card">
+          <h1>Income</h1>
+          <input
+            type="text"
+            class="form-control"
+            name="income-name"
+            id="income-name"
+            placeholder="source of income"
+          />
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              name="currency"
+              id="currency"
+              value="ksh"
+            />
+            <input
+              class="form-control"
+              type="number"
+              name="amount"
+              id="income-amt"
+              placeholder="amount"
+            />
+          </div>
+          <button id="incomeBtn" class="btn btn-success">record</button>
+        </div>
+
+        <div class="expense-card">
+          <h1>Expenses</h1>
+          <input
+            type="text"
+            class="form-control"
+            id="expense-name"
+            placeholder="expenses"
+          />
+          <div class="input-group">
+            <input
+              class="form-control"
+              type="number"
+              id="expense-amt"
+              placeholder="amount"
+            />
+          </div>
+          <button id="expenseBtn" class="btn btn-success">record</button>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Transaction name</th>
+              <th scope="col">Transaction type</th>
+              <th scope="col">Transaction amount</th>
+            </tr>
+          </thead>
+          <tbody id="trans-body"></tbody>
+          <tfoot>
+            <tr>
+              <td>Stats:</td>
+              <td class="text-white bg-success">
+                <span id="inc-amt">0</span> in income
+              </td>
+              <td class="text-white bg-danger">
+                <span id="exp-amt">0</span> in expenses
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section class="articles">
+        <a target="_blank" href="https://juma.vercel.app"
+          ><img
+            class="img-links"
+            src="pics/poster-01.png"
+            alt="link to my portfolo"
+          />
+        </a>
+        <a target="_blank" href="https://ub-insights.vercel.app"
+          ><img
+            class="img-links"
+            src="pics/ubuntu-01.png"
+            alt="link to gaming site"
+          />
+        </a>
+        <a target="_blank" href="https://grandrookie.vercel.app"
+          ><img
+            class="img-links"
+            src="pics/gaming poster-01.png"
+            alt="link to my portfolo"
+          />
+        </a>
+      </section>
+      <footer>
+        <div class="main-foot"></div>
+        <div class="closing-foot">
+          <p class="text-center py-2">utility</p>
+        </div>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

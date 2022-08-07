@@ -1,0 +1,200 @@
+/* css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+  margin-bottom: 0;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.menu,
+#intro-cards,
+#main-content {
+  position: absolute;
+}
+
+#main-content,
+.menu {
+  transition: all 0.5s;
+}
+.menu-open {
+  z-index: 1000;
+  background-color: #b165b1;
+  display: flex;
+  transform: translateX(0);
+}
+.menu-close {
+  display: none;
+  transform: translateX(-100%);
+}
+#nav {
+  list-style: none;
+  padding: 0;
+  margin: auto 0;
+}
+.home-icon {
+  color: #ececec;
+}
+#main-content {
+  transform: translateX(calc(100vw + 1rem));
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+#intro-cards {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  margin-bottom: 0;
+}
+
+.carousel-track {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.carousel-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.intro-card {
+  width: 100%;
+  height: 18em;
+  background-color: #b165b1;
+  position: relative;
+  overflow: hidden;
+  background-image: url(pics/blob.svg);
+  background-position: center;
+  background-size: cover;
+  color: #ececec;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.auth-card {
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.car-indicator {
+  border: 0;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: grey;
+}
+.car-indicator.selected {
+  background-color: #b165b1;
+}
+.login-form {
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+#main-content {
+  background-color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.logo {
+  height: 7em;
+  background: url(pics/utility\ logo.svg);
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  margin: 2.5rem 0;
+}
+
+.to-do {
+  padding-bottom: 4rem;
+  min-height: 55%;
+}
+
+.to-do .input-group {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: auto;
+}
+#todo-body td:not(:first-child) {
+  width: 1rem;
+}
+
+.income-card,
+.expense-card {
+  background-color: #efecec;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+.income-card .input-group,
+.expense-card .input-group {
+  margin: 1rem 0;
+}
+
+.articles a {
+  width: 33%;
+}
+img-links {
+  height: 100%;
+  object-fit: fill;
+}
+footer {
+  color: #efecec;
+  background-color: #00003b;
+  padding: 0;
+  margin-bottom: -2rem;
+}
+.closing-foot {
+  background-color: #00004e;
+}
